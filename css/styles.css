@@ -1,0 +1,373 @@
+:root {
+	--primary-text-color: #434455;
+	--primary-background-color: #ffffff;
+
+	--title-text-color: #2e2f42;
+
+	--logo-web-color: #4d5ae5;
+	--logo-head-studio-color: #2e2f42;
+	--logo-foot-studio-color: #f4f4fd;
+
+	--button-text-color: #4d5ae5;
+	--button-bcg-color: #f4f4fd;
+	--accent-text-color: #ffffff;
+	--accent-color: #4d5ae5;
+	--button-click-color: #404bbf;
+
+	--hero-text-color: #ffffff;
+	--hero-bcg-color: #2e2f42;
+
+	--footer-text-color: #e7e9fc;
+	--footer-bcg-color: #2e2f42;
+
+	--team-section-bcg-color: #f4f4fd;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	/* Вопрос: обязательно ли убирать line-hight и letter-spacing из body,
+	 так как это повлечёт за собой добавление доп классов и кода к ним. */
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+
+	color: var(--primary-text-color);
+	background-color: var(--primary-background-color);
+}
+
+.list {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+
+	list-style: none;
+}
+
+.text {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.container {
+	width: 1158px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	/* outline: 2px solid tomato; */
+}
+
+.main-nav,
+.site-nav,
+.auth-nav,
+.advantage-list,
+.work-list,
+.team-list,
+.portfolio-section 
+.list {
+	display: flex;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* header section */
+
+.header {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	height: 72px;
+	border-bottom: 1px solid #ffffff;
+	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header 
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-nav 
+.item + 
+.item,
+.auth-nav 
+.item + 
+.item {
+	margin-left: 40px;
+}
+
+.header 
+.link {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+/* logo */
+
+.logo {
+	margin-right: 77px;
+
+	font-family: "Raleway", sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1.33;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--logo-web-color);
+}
+
+.studio {
+	color: var(--logo-head-studio-color);
+}
+
+.studio-footer {
+	color: var(--logo-foot-studio-color);
+}
+
+.footer 
+.logo {
+	display: inline-block;
+	margin-right: 0;
+	margin-bottom: 16px;
+	line-height: 1.17;
+}
+
+/* navigation */
+
+.link {
+	text-decoration: none;
+	color: var(--primary-text-color);
+}
+
+.site-nav 
+.link {
+	font-weight: 700;
+	color: inherit;
+}
+
+.auth-nav 
+.link:hover,
+.auth-nav 
+.link:focus,
+.site-nav 
+.link:hover,
+.site-nav 
+.link:focus {
+	color: var(--accent-color);
+}
+
+/* portfolio and order buttons */
+
+.button {
+	padding: 12px 24px;
+
+	font-family: inherit;
+	font-weight: 500;
+	font-size: inherit;
+	line-height: inherit;
+	letter-spacing: 0.04em;
+	color: var(--button-text-color);
+	background-color: var(--button-bcg-color);
+	cursor: pointer;
+	border: 1px solid #e7e9fc;
+	border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+	color: var(--accent-text-color);
+	background-color: var(--accent-color);
+}
+
+.order-button {
+	padding: 16px 32px;
+	border: 0;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: var(--accent-text-color);
+	background-color: var(--button-text-color);
+	line-height: 1.2;
+}
+
+.order-button.button:hover {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.order-button.button:focus,
+.order-button.button:active {
+	background-color: var(--button-click-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* sections */
+
+.work .secion-title,
+.team .secion-title {
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.advantages,
+.team {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.secion-title {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.11;
+	text-transform: capitalize;
+	color: var(--title-text-color);
+}
+
+.title {
+	margin-top: 0;
+	margin-bottom: 0;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.2;
+	color: var(--title-text-color);
+}
+
+.advantage-list,
+.work-list,
+.team-list {
+	column-gap: 24px;
+}
+
+.advantage-list .title,
+.team-list .title,
+.card .title {
+	margin-bottom: 8px;
+}
+
+/* Order section */
+
+.order {
+	background-color: var(--hero-bcg-color);
+	padding-top: 192px;
+	padding-bottom: 192px;
+}
+
+.order 
+.container {
+	padding: 0;
+	width: 492px;
+	text-align: center;
+}
+
+.order-title {
+	margin-bottom: 48px;
+
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.07;
+	text-align: center;
+	color: var(--hero-text-color);
+}
+
+/* advantages section */
+
+.advantage-list 
+.item {
+	width: calc((100% - 24px * 3) / 4);
+}
+
+/* work section */
+
+.work {
+	padding-bottom: 120px;
+}
+
+.work-list 
+.item {
+	width: calc((100% - 24px * 2) / 3);
+}
+
+/* team section*/
+
+.team {
+	background-color: var(--team-section-bcg-color);
+}
+
+.team 
+.item {
+	background-color: var(--primary-background-color);
+}
+
+.team 
+.card {
+	padding: 32px 16px;
+	text-align: center;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+}
+
+/* portfolio-section */
+
+.portfolio-section {
+	padding-top: 96px;
+	padding-bottom: 120px;
+}
+
+.button-list {
+	justify-content: center;
+	margin-bottom: 72px;   
+	column-gap: 24px;
+}
+
+.portfolio-list {
+	flex-wrap: wrap;
+	row-gap: 48px;
+	column-gap: 24px;
+}
+
+.portfolio-list 
+.item {
+	width: calc((100% - 24px * 2) / 3);
+	border-bottom: 0.5px solid #f4f4fd;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-list 
+.card {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+/* footer */
+
+.footer {
+	padding-top: 138px;
+	padding-bottom: 100px;
+	color: var(--footer-text-color);
+	background-color: var(--footer-bcg-color);
+}
+
+.footer-main {
+	width: 264px;
+}
